@@ -1,0 +1,48 @@
+module lista01 {
+  interface Funcionario {
+    float reajuste(in string nome, in string cargo,in float salario);/*se cargo = "programador reajuste 18% se = "operado " reajuste 20%*/
+    float salario_liquido(in string nome, in char nivel, in float salario_bruto, in long numero_dependentes );/*
+     para o nível "A", o desconto é de 3% se o funcionário não tiver dependentes e 8% se o funcionário tiver dependentes;
+     para o nível "B", o desconto é de 5% se o funcionário não tiver dependentes e 10% se o funcionário tiver dependentes;
+     para o nível "C", o desconto é de 8% se o funcionário não tiver dependentes e 15% se o funcionário tiver dependentes;
+     para o nível "D", o desconto é de 10% se o funcionário não tiver dependentes e 17% se o funcionário tiver dependentes.
+    */
+    boolean pode_posentar(in long idade,in long tempo_de_servico);
+    /**
+    ter no mínimo 65 anos de idade;
+    ter trabalhado, no mínimo, 30 anos;
+    ter no mínimo 60 anos de idade e ter trabalhado no mínimo 25 anos
+    */
+  };
+  interface Pessoa{
+    boolean atingiu_maior_idade(in string sexo, in long idade);/*se sexo = "masculino" e idade > 18 ou  sexo = "feminino" e idade > 21 retorna true senao false */
+    float pesso_ideal (in string sexo, in float altura);/*
+        para homens: (72.7 * altura) – 58;
+        para mulheres (62.1 * altura) – 44.7.
+    */
+
+  };
+
+  interface Aluno{
+    boolean media_n1_n2(in float n1, in float n2,out n);
+    boolean media_n_n3(in float n, in float n3);
+  };
+  interface Nadador{
+    string categoria (in long idade);/**
+        infantil A 5 - 7 anos
+        infantil B 8-10 anos
+        juvenil A 11-13 anos
+        juvenil B 14-17 anos
+        adulto maiores de 18 anos
+    */
+  };
+  interface Cliente{
+    float credito (in float saldo_medio)/**
+    de 0 a 200 nenhum crédito
+    de 201 a 400 20% do valor do saldo médio
+    de 401 a 600 30% do valor do saldo médio
+    acima de 601 40% do valor do saldo médio
+    */
+  };
+};
+
