@@ -7,7 +7,7 @@ module lista01 {
      para o nível "C", o desconto é de 8% se o funcionário não tiver dependentes e 15% se o funcionário tiver dependentes;
      para o nível "D", o desconto é de 10% se o funcionário não tiver dependentes e 17% se o funcionário tiver dependentes.
     */
-    boolean pode_posentar(in long idade,in long tempo_de_servico);
+    boolean pode_aposentar(in long idade,in long tempo_de_servico);
     /**
     ter no mínimo 65 anos de idade;
     ter trabalhado, no mínimo, 30 anos;

@@ -16,19 +16,19 @@ except NameError:
 
 
 #
-# Start of module "lista01"
+# Start of module "Lista01"
 #
-__name__ = "lista01"
-_0_lista01 = omniORB.openModule("lista01", r"ex1.idl")
-_0_lista01__POA = omniORB.openModule("lista01__POA", r"ex1.idl")
+__name__ = "Lista01"
+_0_Lista01 = omniORB.openModule("Lista01", r"ex1.idl")
+_0_Lista01__POA = omniORB.openModule("Lista01__POA", r"ex1.idl")
 
 
 # interface Funcionario
-_0_lista01._d_Funcionario = (omniORB.tcInternal.tv_objref, "IDL:lista01/Funcionario:1.0", "Funcionario")
-omniORB.typeMapping["IDL:lista01/Funcionario:1.0"] = _0_lista01._d_Funcionario
-_0_lista01.Funcionario = omniORB.newEmptyClass()
+_0_Lista01._d_Funcionario = (omniORB.tcInternal.tv_objref, "IDL:Lista01/Funcionario:1.0", "Funcionario")
+omniORB.typeMapping["IDL:Lista01/Funcionario:1.0"] = _0_Lista01._d_Funcionario
+_0_Lista01.Funcionario = omniORB.newEmptyClass()
 class Funcionario :
-    _NP_RepositoryId = _0_lista01._d_Funcionario[1]
+    _NP_RepositoryId = _0_Lista01._d_Funcionario[1]
 
     def __init__(self, *args, **kw):
         raise RuntimeError("Cannot construct objects of this type.")
@@ -36,14 +36,14 @@ class Funcionario :
     _nil = CORBA.Object._nil
 
 
-_0_lista01.Funcionario = Funcionario
-_0_lista01._tc_Funcionario = omniORB.tcInternal.createTypeCode(_0_lista01._d_Funcionario)
-omniORB.registerType(Funcionario._NP_RepositoryId, _0_lista01._d_Funcionario, _0_lista01._tc_Funcionario)
+_0_Lista01.Funcionario = Funcionario
+_0_Lista01._tc_Funcionario = omniORB.tcInternal.createTypeCode(_0_Lista01._d_Funcionario)
+omniORB.registerType(Funcionario._NP_RepositoryId, _0_Lista01._d_Funcionario, _0_Lista01._tc_Funcionario)
 
 # Funcionario operations and attributes
 Funcionario._d_reajuste = (((omniORB.tcInternal.tv_string,0), (omniORB.tcInternal.tv_string,0), omniORB.tcInternal.tv_float), (omniORB.tcInternal.tv_float, ), None)
 Funcionario._d_salario_liquido = (((omniORB.tcInternal.tv_string,0), omniORB.tcInternal.tv_char, omniORB.tcInternal.tv_float, omniORB.tcInternal.tv_long), (omniORB.tcInternal.tv_float, ), None)
-Funcionario._d_pode_posentar = ((omniORB.tcInternal.tv_long, omniORB.tcInternal.tv_long), (omniORB.tcInternal.tv_boolean, ), None)
+Funcionario._d_pode_aposentar = ((omniORB.tcInternal.tv_long, omniORB.tcInternal.tv_long), (omniORB.tcInternal.tv_boolean, ), None)
 
 # Funcionario object reference
 class _objref_Funcionario (CORBA.Object):
@@ -53,38 +53,38 @@ class _objref_Funcionario (CORBA.Object):
         CORBA.Object.__init__(self, obj)
 
     def reajuste(self, *args):
-        return self._obj.invoke("reajuste", _0_lista01.Funcionario._d_reajuste, args)
+        return self._obj.invoke("reajuste", _0_Lista01.Funcionario._d_reajuste, args)
 
     def salario_liquido(self, *args):
-        return self._obj.invoke("salario_liquido", _0_lista01.Funcionario._d_salario_liquido, args)
+        return self._obj.invoke("salario_liquido", _0_Lista01.Funcionario._d_salario_liquido, args)
 
-    def pode_posentar(self, *args):
-        return self._obj.invoke("pode_posentar", _0_lista01.Funcionario._d_pode_posentar, args)
+    def pode_aposentar(self, *args):
+        return self._obj.invoke("pode_aposentar", _0_Lista01.Funcionario._d_pode_aposentar, args)
 
 omniORB.registerObjref(Funcionario._NP_RepositoryId, _objref_Funcionario)
-_0_lista01._objref_Funcionario = _objref_Funcionario
+_0_Lista01._objref_Funcionario = _objref_Funcionario
 del Funcionario, _objref_Funcionario
 
 # Funcionario skeleton
-__name__ = "lista01__POA"
+__name__ = "Lista01__POA"
 class Funcionario (PortableServer.Servant):
-    _NP_RepositoryId = _0_lista01.Funcionario._NP_RepositoryId
+    _NP_RepositoryId = _0_Lista01.Funcionario._NP_RepositoryId
 
 
-    _omni_op_d = {"reajuste": _0_lista01.Funcionario._d_reajuste, "salario_liquido": _0_lista01.Funcionario._d_salario_liquido, "pode_posentar": _0_lista01.Funcionario._d_pode_posentar}
+    _omni_op_d = {"reajuste": _0_Lista01.Funcionario._d_reajuste, "salario_liquido": _0_Lista01.Funcionario._d_salario_liquido, "pode_aposentar": _0_Lista01.Funcionario._d_pode_aposentar}
 
 Funcionario._omni_skeleton = Funcionario
-_0_lista01__POA.Funcionario = Funcionario
+_0_Lista01__POA.Funcionario = Funcionario
 omniORB.registerSkeleton(Funcionario._NP_RepositoryId, Funcionario)
 del Funcionario
-__name__ = "lista01"
+__name__ = "Lista01"
 
 # interface Pessoa
-_0_lista01._d_Pessoa = (omniORB.tcInternal.tv_objref, "IDL:lista01/Pessoa:1.0", "Pessoa")
-omniORB.typeMapping["IDL:lista01/Pessoa:1.0"] = _0_lista01._d_Pessoa
-_0_lista01.Pessoa = omniORB.newEmptyClass()
+_0_Lista01._d_Pessoa = (omniORB.tcInternal.tv_objref, "IDL:Lista01/Pessoa:1.0", "Pessoa")
+omniORB.typeMapping["IDL:Lista01/Pessoa:1.0"] = _0_Lista01._d_Pessoa
+_0_Lista01.Pessoa = omniORB.newEmptyClass()
 class Pessoa :
-    _NP_RepositoryId = _0_lista01._d_Pessoa[1]
+    _NP_RepositoryId = _0_Lista01._d_Pessoa[1]
 
     def __init__(self, *args, **kw):
         raise RuntimeError("Cannot construct objects of this type.")
@@ -92,9 +92,9 @@ class Pessoa :
     _nil = CORBA.Object._nil
 
 
-_0_lista01.Pessoa = Pessoa
-_0_lista01._tc_Pessoa = omniORB.tcInternal.createTypeCode(_0_lista01._d_Pessoa)
-omniORB.registerType(Pessoa._NP_RepositoryId, _0_lista01._d_Pessoa, _0_lista01._tc_Pessoa)
+_0_Lista01.Pessoa = Pessoa
+_0_Lista01._tc_Pessoa = omniORB.tcInternal.createTypeCode(_0_Lista01._d_Pessoa)
+omniORB.registerType(Pessoa._NP_RepositoryId, _0_Lista01._d_Pessoa, _0_Lista01._tc_Pessoa)
 
 # Pessoa operations and attributes
 Pessoa._d_atingiu_maior_idade = (((omniORB.tcInternal.tv_string,0), omniORB.tcInternal.tv_long), (omniORB.tcInternal.tv_boolean, ), None)
@@ -108,35 +108,35 @@ class _objref_Pessoa (CORBA.Object):
         CORBA.Object.__init__(self, obj)
 
     def atingiu_maior_idade(self, *args):
-        return self._obj.invoke("atingiu_maior_idade", _0_lista01.Pessoa._d_atingiu_maior_idade, args)
+        return self._obj.invoke("atingiu_maior_idade", _0_Lista01.Pessoa._d_atingiu_maior_idade, args)
 
     def pesso_ideal(self, *args):
-        return self._obj.invoke("pesso_ideal", _0_lista01.Pessoa._d_pesso_ideal, args)
+        return self._obj.invoke("pesso_ideal", _0_Lista01.Pessoa._d_pesso_ideal, args)
 
 omniORB.registerObjref(Pessoa._NP_RepositoryId, _objref_Pessoa)
-_0_lista01._objref_Pessoa = _objref_Pessoa
+_0_Lista01._objref_Pessoa = _objref_Pessoa
 del Pessoa, _objref_Pessoa
 
 # Pessoa skeleton
-__name__ = "lista01__POA"
+__name__ = "Lista01__POA"
 class Pessoa (PortableServer.Servant):
-    _NP_RepositoryId = _0_lista01.Pessoa._NP_RepositoryId
+    _NP_RepositoryId = _0_Lista01.Pessoa._NP_RepositoryId
 
 
-    _omni_op_d = {"atingiu_maior_idade": _0_lista01.Pessoa._d_atingiu_maior_idade, "pesso_ideal": _0_lista01.Pessoa._d_pesso_ideal}
+    _omni_op_d = {"atingiu_maior_idade": _0_Lista01.Pessoa._d_atingiu_maior_idade, "pesso_ideal": _0_Lista01.Pessoa._d_pesso_ideal}
 
 Pessoa._omni_skeleton = Pessoa
-_0_lista01__POA.Pessoa = Pessoa
+_0_Lista01__POA.Pessoa = Pessoa
 omniORB.registerSkeleton(Pessoa._NP_RepositoryId, Pessoa)
 del Pessoa
-__name__ = "lista01"
+__name__ = "Lista01"
 
 # interface Aluno
-_0_lista01._d_Aluno = (omniORB.tcInternal.tv_objref, "IDL:lista01/Aluno:1.0", "Aluno")
-omniORB.typeMapping["IDL:lista01/Aluno:1.0"] = _0_lista01._d_Aluno
-_0_lista01.Aluno = omniORB.newEmptyClass()
+_0_Lista01._d_Aluno = (omniORB.tcInternal.tv_objref, "IDL:Lista01/Aluno:1.0", "Aluno")
+omniORB.typeMapping["IDL:Lista01/Aluno:1.0"] = _0_Lista01._d_Aluno
+_0_Lista01.Aluno = omniORB.newEmptyClass()
 class Aluno :
-    _NP_RepositoryId = _0_lista01._d_Aluno[1]
+    _NP_RepositoryId = _0_Lista01._d_Aluno[1]
 
     def __init__(self, *args, **kw):
         raise RuntimeError("Cannot construct objects of this type.")
@@ -144,9 +144,9 @@ class Aluno :
     _nil = CORBA.Object._nil
 
 
-_0_lista01.Aluno = Aluno
-_0_lista01._tc_Aluno = omniORB.tcInternal.createTypeCode(_0_lista01._d_Aluno)
-omniORB.registerType(Aluno._NP_RepositoryId, _0_lista01._d_Aluno, _0_lista01._tc_Aluno)
+_0_Lista01.Aluno = Aluno
+_0_Lista01._tc_Aluno = omniORB.tcInternal.createTypeCode(_0_Lista01._d_Aluno)
+omniORB.registerType(Aluno._NP_RepositoryId, _0_Lista01._d_Aluno, _0_Lista01._tc_Aluno)
 
 # Aluno operations and attributes
 Aluno._d_media_n1_n2 = ((omniORB.tcInternal.tv_float, omniORB.tcInternal.tv_float), (omniORB.tcInternal.tv_boolean, ), None)
@@ -160,35 +160,35 @@ class _objref_Aluno (CORBA.Object):
         CORBA.Object.__init__(self, obj)
 
     def media_n1_n2(self, *args):
-        return self._obj.invoke("media_n1_n2", _0_lista01.Aluno._d_media_n1_n2, args)
+        return self._obj.invoke("media_n1_n2", _0_Lista01.Aluno._d_media_n1_n2, args)
 
     def media_n_n3(self, *args):
-        return self._obj.invoke("media_n_n3", _0_lista01.Aluno._d_media_n_n3, args)
+        return self._obj.invoke("media_n_n3", _0_Lista01.Aluno._d_media_n_n3, args)
 
 omniORB.registerObjref(Aluno._NP_RepositoryId, _objref_Aluno)
-_0_lista01._objref_Aluno = _objref_Aluno
+_0_Lista01._objref_Aluno = _objref_Aluno
 del Aluno, _objref_Aluno
 
 # Aluno skeleton
-__name__ = "lista01__POA"
+__name__ = "Lista01__POA"
 class Aluno (PortableServer.Servant):
-    _NP_RepositoryId = _0_lista01.Aluno._NP_RepositoryId
+    _NP_RepositoryId = _0_Lista01.Aluno._NP_RepositoryId
 
 
-    _omni_op_d = {"media_n1_n2": _0_lista01.Aluno._d_media_n1_n2, "media_n_n3": _0_lista01.Aluno._d_media_n_n3}
+    _omni_op_d = {"media_n1_n2": _0_Lista01.Aluno._d_media_n1_n2, "media_n_n3": _0_Lista01.Aluno._d_media_n_n3}
 
 Aluno._omni_skeleton = Aluno
-_0_lista01__POA.Aluno = Aluno
+_0_Lista01__POA.Aluno = Aluno
 omniORB.registerSkeleton(Aluno._NP_RepositoryId, Aluno)
 del Aluno
-__name__ = "lista01"
+__name__ = "Lista01"
 
 # interface Nadador
-_0_lista01._d_Nadador = (omniORB.tcInternal.tv_objref, "IDL:lista01/Nadador:1.0", "Nadador")
-omniORB.typeMapping["IDL:lista01/Nadador:1.0"] = _0_lista01._d_Nadador
-_0_lista01.Nadador = omniORB.newEmptyClass()
+_0_Lista01._d_Nadador = (omniORB.tcInternal.tv_objref, "IDL:Lista01/Nadador:1.0", "Nadador")
+omniORB.typeMapping["IDL:Lista01/Nadador:1.0"] = _0_Lista01._d_Nadador
+_0_Lista01.Nadador = omniORB.newEmptyClass()
 class Nadador :
-    _NP_RepositoryId = _0_lista01._d_Nadador[1]
+    _NP_RepositoryId = _0_Lista01._d_Nadador[1]
 
     def __init__(self, *args, **kw):
         raise RuntimeError("Cannot construct objects of this type.")
@@ -196,9 +196,9 @@ class Nadador :
     _nil = CORBA.Object._nil
 
 
-_0_lista01.Nadador = Nadador
-_0_lista01._tc_Nadador = omniORB.tcInternal.createTypeCode(_0_lista01._d_Nadador)
-omniORB.registerType(Nadador._NP_RepositoryId, _0_lista01._d_Nadador, _0_lista01._tc_Nadador)
+_0_Lista01.Nadador = Nadador
+_0_Lista01._tc_Nadador = omniORB.tcInternal.createTypeCode(_0_Lista01._d_Nadador)
+omniORB.registerType(Nadador._NP_RepositoryId, _0_Lista01._d_Nadador, _0_Lista01._tc_Nadador)
 
 # Nadador operations and attributes
 Nadador._d_categoria = ((omniORB.tcInternal.tv_long, ), ((omniORB.tcInternal.tv_string,0), ), None)
@@ -211,32 +211,32 @@ class _objref_Nadador (CORBA.Object):
         CORBA.Object.__init__(self, obj)
 
     def categoria(self, *args):
-        return self._obj.invoke("categoria", _0_lista01.Nadador._d_categoria, args)
+        return self._obj.invoke("categoria", _0_Lista01.Nadador._d_categoria, args)
 
 omniORB.registerObjref(Nadador._NP_RepositoryId, _objref_Nadador)
-_0_lista01._objref_Nadador = _objref_Nadador
+_0_Lista01._objref_Nadador = _objref_Nadador
 del Nadador, _objref_Nadador
 
 # Nadador skeleton
-__name__ = "lista01__POA"
+__name__ = "Lista01__POA"
 class Nadador (PortableServer.Servant):
-    _NP_RepositoryId = _0_lista01.Nadador._NP_RepositoryId
+    _NP_RepositoryId = _0_Lista01.Nadador._NP_RepositoryId
 
 
-    _omni_op_d = {"categoria": _0_lista01.Nadador._d_categoria}
+    _omni_op_d = {"categoria": _0_Lista01.Nadador._d_categoria}
 
 Nadador._omni_skeleton = Nadador
-_0_lista01__POA.Nadador = Nadador
+_0_Lista01__POA.Nadador = Nadador
 omniORB.registerSkeleton(Nadador._NP_RepositoryId, Nadador)
 del Nadador
-__name__ = "lista01"
+__name__ = "Lista01"
 
 # interface Cliente
-_0_lista01._d_Cliente = (omniORB.tcInternal.tv_objref, "IDL:lista01/Cliente:1.0", "Cliente")
-omniORB.typeMapping["IDL:lista01/Cliente:1.0"] = _0_lista01._d_Cliente
-_0_lista01.Cliente = omniORB.newEmptyClass()
+_0_Lista01._d_Cliente = (omniORB.tcInternal.tv_objref, "IDL:Lista01/Cliente:1.0", "Cliente")
+omniORB.typeMapping["IDL:Lista01/Cliente:1.0"] = _0_Lista01._d_Cliente
+_0_Lista01.Cliente = omniORB.newEmptyClass()
 class Cliente :
-    _NP_RepositoryId = _0_lista01._d_Cliente[1]
+    _NP_RepositoryId = _0_Lista01._d_Cliente[1]
 
     def __init__(self, *args, **kw):
         raise RuntimeError("Cannot construct objects of this type.")
@@ -244,9 +244,9 @@ class Cliente :
     _nil = CORBA.Object._nil
 
 
-_0_lista01.Cliente = Cliente
-_0_lista01._tc_Cliente = omniORB.tcInternal.createTypeCode(_0_lista01._d_Cliente)
-omniORB.registerType(Cliente._NP_RepositoryId, _0_lista01._d_Cliente, _0_lista01._tc_Cliente)
+_0_Lista01.Cliente = Cliente
+_0_Lista01._tc_Cliente = omniORB.tcInternal.createTypeCode(_0_Lista01._d_Cliente)
+omniORB.registerType(Cliente._NP_RepositoryId, _0_Lista01._d_Cliente, _0_Lista01._tc_Cliente)
 
 # Cliente operations and attributes
 Cliente._d_credito = ((omniORB.tcInternal.tv_float, ), (omniORB.tcInternal.tv_float, ), None)
@@ -259,31 +259,31 @@ class _objref_Cliente (CORBA.Object):
         CORBA.Object.__init__(self, obj)
 
     def credito(self, *args):
-        return self._obj.invoke("credito", _0_lista01.Cliente._d_credito, args)
+        return self._obj.invoke("credito", _0_Lista01.Cliente._d_credito, args)
 
 omniORB.registerObjref(Cliente._NP_RepositoryId, _objref_Cliente)
-_0_lista01._objref_Cliente = _objref_Cliente
+_0_Lista01._objref_Cliente = _objref_Cliente
 del Cliente, _objref_Cliente
 
 # Cliente skeleton
-__name__ = "lista01__POA"
+__name__ = "Lista01__POA"
 class Cliente (PortableServer.Servant):
-    _NP_RepositoryId = _0_lista01.Cliente._NP_RepositoryId
+    _NP_RepositoryId = _0_Lista01.Cliente._NP_RepositoryId
 
 
-    _omni_op_d = {"credito": _0_lista01.Cliente._d_credito}
+    _omni_op_d = {"credito": _0_Lista01.Cliente._d_credito}
 
 Cliente._omni_skeleton = Cliente
-_0_lista01__POA.Cliente = Cliente
+_0_Lista01__POA.Cliente = Cliente
 omniORB.registerSkeleton(Cliente._NP_RepositoryId, Cliente)
 del Cliente
-__name__ = "lista01"
+__name__ = "Lista01"
 
 #
-# End of module "lista01"
+# End of module "Lista01"
 #
 __name__ = "ex1_idl"
 
-_exported_modules = ( "lista01", )
+_exported_modules = ( "Lista01", )
 
 # The end.
